@@ -1,5 +1,9 @@
 # Documentation Best Practices
 
+## No-Criticism Principle
+
+When I talk about the problems in the documentation of any existing product in this or other documents, I have no intention to criticize or blame the developers of the product. I'm merely trying to provide my thoughts about what the problem is and how it can be fixed in order to make the documentation better.
+
 ## Motivation
 
 I believe **efficient knowledge transfer is a vital factor for successful software development which is mostly done as a team effort**. Think about it: if everyone is an expert on everything, building software, even though which is not guaranteed to succeed, is more likely to succeed because people know how to use the tools correctly while avoiding the pitfalls of using them.
@@ -30,6 +34,8 @@ Although this repository is created with software documentation in mind, I belie
 This repository is primarily targeted to software developers who are usually not considered as a documentation writer. However, as I said above, I believe all the developers or engineers who work in the technological areas can be beneficial from it.
 
 ## Best Practices
+
+Provide an overview on the fundamental concepts to lay a good foundation for the readers of why a certain thing is done in a certain way. A good example is the [_SVN Book: Chapter 1. Fundamental Concepts_](https://svnbook.red-bean.com/en/1.7/svn.basic.html). [_Mastering CMake: Key Concepts_](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Key%20Concepts.html#key-concepts) is the same attempt but I don't think the key concepts there are sufficient: they still miss some concepts I think are important for readers to understand the tool.
 
 This article ["What nobody tells you about documentation"](https://www.divio.com/blog/documentation/) is a must-read! It separates the documentation into four quadrants, each of which takes a different responsibility:
 

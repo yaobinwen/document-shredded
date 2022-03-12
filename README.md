@@ -66,6 +66,16 @@ I **strongly believe** understanding `why`s is crucial to using the product corr
 
 ## Doc Smells
 
+### Spaghetti Document
+
+Similar to ["spaghetti code"](https://en.wikipedia.org/wiki/Spaghetti_code), "spaghetti document" describes unstructured and difficult-to-follow documentation which can be caused by the following factors:
+- The document does not lay a good foundation for the readers to learn step by step so the readers suffer from an initial steep learning curve. In contrast, for a good example that does guide the readers step by step to understand complicated topics, see [_Essentials of Economics_](https://www.cengage.com/c/essentials-of-economics-8e-mankiw/9781337091992PF/) by Gregory Mankiw.
+- Usually, because of the previous factor, such documents are full of links that lead to other topics in the same document. These links can distract the readers from the learning of the current topic and get them lost in the "forest of links" quickly.
+
+A good document, in contrast, should start with the fundamental knowledge so the readers should be able to read from the first section all the way down to the last chapter without jumping back and forth among chapters. Sometimes, the document provides links to external sources, but:
+- Ideally, these links should not point to the other topics in the same document.
+- These links should point to external documents that the readers can but don't have to read in order to understand the current topic.
+
 ### Reference without Definition
 
 See the section ["Control Machine Requirements"](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#control-machine-requirements) of Ansible's documentation. This section is the first time the term "control machine" is used, but there is no definition or explanation of what a "control machine" is. The reader needs to infer it from the context.

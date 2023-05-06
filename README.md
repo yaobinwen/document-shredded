@@ -1,41 +1,101 @@
 # Documentation Best Practices
 
-## No-Criticism Principle
+(Status: This is still work in progress as of 2023-05-06.)
 
-When I talk about the problems in the documentation of any existing product in this or other documents, I have no intention to criticize or blame the developers of the product. I'm merely trying to provide my thoughts about what the problem is and how it can be fixed in order to make the documentation better.
+## 1. No-Criticism Principle
 
-## Motivation
+When I talk about the problems in the documentation (including online documents or published books) of any existing product, I have no intention to criticize or blame the developers of the product or the authors of the documentation. I'm merely trying to provide my thoughts about what the problems are and how they can be fixed in order to make the documentation better.
 
-I believe **efficient knowledge transfer is a vital factor for successful software development which is mostly done as a team effort**. Think about it: if everyone is an expert on everything, building software, even though which is not guaranteed to succeed, is more likely to succeed because people know how to use the tools correctly while avoiding the pitfalls of using them.
+## 2. Motivation
 
-In reality, chances are everyone is just good at one or two areas. We can identify two scenarios where knowledge transfer is needed:
+I believe **efficient knowledge transfer is a vital factor for successful software development which is mostly done as a team effort**. Think about it in a mind experiment: if everyone can become an expert on everything, software development can be more likely to succeed because people know how to use the tools/libraries correctly and avoid the pitfalls of using them.
 
-- Firstly, a junior member is recruited into the team so some senior member needs to teach him/her.
-- Secondly, in a team where members rotate the roles, one team member may need to teach another team member the things he/she has worked on in the recent past.
+In reality, chances are everyone is just good in one or two areas. I can identify two scenarios where knowledge transfer is needed:
 
-Efficient knowledge transfer can minimize the time that is needed to transfer the knowledge while the precision of the understanding of the transferred knowledge is still sustained. In other words, we spend time to transfer knowledge, not confusion or misunderstanding.
+- 1). A junior member is recruited into the team, so some senior member needs to teach him/her.
+- 2). In a team where members rotate the roles, one team member may need to teach another team member the things he/she has worked on in the recent past.
 
-Another way of looking at this is: ideally efficient knowledge transfer is similar to running the "copy" command between two machines. Before "copy" is run, the file of knowledge only exists on one machine; after "copy" is run, an exact copy of this file exists on the second machine, too.
+Efficient knowledge transfer can minimize the needed time to transfer the knowledge while the precision of the understanding of the transferred knowledge is still sustained. In other words, we want to spend time to transfer knowledge, not to transfer confusion or misunderstanding.
+
+Another way of looking at this is: Efficient knowledge transfer is similar to running the "copy" command between two machines. Before "copy" is run, the file of knowledge only exists on one machine; after "copy" is run, an exact copy of this file exists on the second machine, too.
 
 In software industry, documentation is an important means of transferring knowledge from the author of a software package to its potential users and prospective maintainers. The documentation can be as simple as a single `README` file or a whole site of documents.
 
-Unfortunately, I've observed many such documentation efforts not achieving the goal of "efficient knowledge transfer": typically, they fail to discuss the topic clearly enough which causes the readers either to be confused thus have to spend more time to learn the material, hence wasting more time, or, worse, to think they "understand" the topic but in fact they really haven't.
+Unfortunately, I've observed many such documents failing to achieve the goal of "efficient knowledge transfer": Typically, they fail to discuss the topic clearly enough and cause the readers either to be confused (thus have to spend more time to learn the material, hence wasting more time), or, worse, to think they "understand" the topic but in fact they really haven't.
 
-This project, `Document Shredded`, aims at advocating the best practices of documentation and alerting the bad practices of documentation so we can make knowledge transfer among software developers more efficient.
+This project, `Document Shredded`, aims at advocating the best practices of documentation and alerting the bad practices so we can make knowledge transfer more efficient.
 
-## What This Is
+## 3. What This Is
 
-This is a repository that collects documentation good practices with examples and bad practices as counter-examples in order to create a repeatible process of creating easy-to-understand documentation.
+This is a repository that collects documentation good practices with examples and bad practices as counter-examples in order to show how to create easy-to-understand documentation.
 
-Although this repository is created with software documentation in mind, I believe the practices are applicable to all technological areas.
+Although this repository is created with software documentation in mind, I believe the practices are applicable to many other areas.
 
-## Who This Is For
+## 4. Who This Is For
 
-This repository is primarily targeted to software developers who are usually not considered as a documentation writer. However, as I said above, I believe all the developers or engineers who work in the technological areas can be beneficial from it.
+This repository is primarily targeted to software developers who are usually not considered as a documentation writer. However, as I said above, I believe all the developers or engineers who work in the technological areas can get benefits from it.
 
-## Best Practices
+## 5. Documentation Smells
+
+Similar to [code smells](https://en.wikipedia.org/wiki/Code_smell), poor documentation has its smells too.
+
+### 5.1 Lost in forest
+
+This smell means the document does not provide an overview on the fundamental concepts of the subject and starts with details too soon. As a result, the readers may not have enough knowledge about the context and not be able to understand why a feature is designed and implemented in the particular way.
+
+This issue may result in a steep learning curve because the readers have to figure out the big picture by themselves, and this process may take a lot of effort and time.
+
+### 5.2 Lack of foundation
+
+This smell means the document does not provide solid explanation of the fundamental knowledge before diving into deeper topics. This may not be an issue for non-beginner readers, but for beginner readers, this would result in a steep learning curve.
+
+In contrast, for a good example that provides the readers a step-by-step guide to deeper and more complicated topics, see [_Essentials of Economics_](https://www.cengage.com/c/essentials-of-economics-8e-mankiw/9781337091992PF/) by Gregory Mankiw.
+
+### 5.3 Spaghetti-like links
+
+This smell means the document is full of links to other parts (especially the later parts) of the document. These links harm the understanding in two ways:
+- Firstly, they can distract the readers from learning the current topic and get them lost in the "forest of links" quickly.
+- Secondly, the constant links to later parts of the document shows that understanding of the earlier parts of the document may need the knowledge of the later parts, which then shows the document contents are arranged poorly.
+
+A good document, in contrast, should start with the fundamental knowledge so the readers should be able to read from the first section all the way down to the last chapter without jumping back and forth among chapters. Sometimes, the document provides links to external sources, but:
+- Ideally, these links should not point to the later parts of the same document.
+- These links should point to external documents that the readers can but don't have to read in order to understand the current topic.
+
+### 5.4 Too deep on one topic
+
+It's usually a good practice to focus on one topic. However, for a complicated product, the explanation of one topic may inevitably involve the explanation of other topics. There are two dimensions regarding the arrangement of explanation: the topics and the required expertise levels. Therefore, it may be better to divide the explanation according to the expertise level first, then by the topics. The good arrangement looks like the diagram below:
+
+![Good arrangement of explanation](./images/Too-deep-topic-good.png)
+
+The bad arrangement looks like the diagram below:
+
+![Bad arrangement of explanation](./images/Too-deep-topic-bad.png)
+
+Bad example: _A Practical Guide to TPM 2.0_: Chapter 9 and onwards are arranged by topics, but each chapter delves a bit too deep for a beginner reader.
+
+### 5.5 Reference without Definition
+
+See the section ["Control Machine Requirements"](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#control-machine-requirements) of Ansible's documentation. This section is the first time the term "control machine" is used, but there is no definition or explanation of what a "control machine" is. The reader needs to infer it from the context.
+
+### 5.6 Inconsistent terminology
+
+This smell means the document use terms that look similar but slightly different to refer to the same concept or not. The problem is the terms look similar so the readers may think they refer to the same concept, but the readers are not sure. This is usually because of two reasons:
+- The context does not provide enough clue for the readers to tell whether they really refer to the same concept or they refer to two concepts that happen to look similar.
+- The readers are not familiar with the area so they don't have the knowledge to tell whether the similar terms refer to the same concept or not. This may not be an issue for non-beginner readers.
+
+This can also result in steep learning curve, because the readers need to make extra efforts.
+
+_A Practical Guide to TPM 2.0_
+
+## 6. Best Practices
+
+Realizing the bad documentation smells is important, but it's not sufficient. We also need to know what good documentation looks like.
+
+### 6.1 Provide an overview on the fundamental concepts
 
 Provide an overview on the fundamental concepts to lay a good foundation for the readers of why a certain thing is done in a certain way. A good example is the [_SVN Book: Chapter 1. Fundamental Concepts_](https://svnbook.red-bean.com/en/1.7/svn.basic.html). [_Mastering CMake: Key Concepts_](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Key%20Concepts.html#key-concepts) is the same attempt but I don't think the key concepts there are sufficient: they still miss some concepts I think are important for readers to understand the tool.
+
+### 6.2 Arrange contents for different purposes
 
 This article ["What nobody tells you about documentation"](https://www.divio.com/blog/documentation/) is a must-read! It separates the documentation into four quadrants, each of which takes a different responsibility:
 
@@ -58,29 +118,9 @@ This article ["What nobody tells you about documentation"](https://www.divio.com
 
 The great thanks go to [Daniele Procida](https://twitter.com/evildmp) who makes it so clear and concise!
 
-## Current Issues
-
 With the above-mentioned four documentation quadrants, I find many documentations are poor because of the lack in "Explanation": they provide a lot of tutorials and how-to guides but fail to give a conceptual explanation of the product components and how and **especially why** they are put that way.
 
 I **strongly believe** understanding `why`s is crucial to using the product correctly, because those `why`s reflect the problems the product is solving. Not understanding the `why`s may result in using the product in the wrong context to solve the wrong problem.
-
-## Doc Smells
-
-### Spaghetti Document
-
-Similar to ["spaghetti code"](https://en.wikipedia.org/wiki/Spaghetti_code), "spaghetti document" describes unstructured and difficult-to-follow documentation which can be caused by the following factors:
-- The document does not lay a good foundation for the readers to learn step by step so the readers suffer from an initial steep learning curve. In contrast, for a good example that does guide the readers step by step to understand complicated topics, see [_Essentials of Economics_](https://www.cengage.com/c/essentials-of-economics-8e-mankiw/9781337091992PF/) by Gregory Mankiw.
-- Usually, because of the previous factor, such documents are full of links that lead to other topics in the same document. These links can distract the readers from the learning of the current topic and get them lost in the "forest of links" quickly.
-
-A good document, in contrast, should start with the fundamental knowledge so the readers should be able to read from the first section all the way down to the last chapter without jumping back and forth among chapters. Sometimes, the document provides links to external sources, but:
-- Ideally, these links should not point to the other topics in the same document.
-- These links should point to external documents that the readers can but don't have to read in order to understand the current topic.
-
-### Reference without Definition
-
-See the section ["Control Machine Requirements"](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#control-machine-requirements) of Ansible's documentation. This section is the first time the term "control machine" is used, but there is no definition or explanation of what a "control machine" is. The reader needs to infer it from the context.
-
-This looks quite like in a program you start to use a variable without defining it. "Hey," you may argue, "the compiler should be smart enough to figure out what that variable means from its context. Any compiler that's unable to do so is dumb."
 
 ## Useful Links
 

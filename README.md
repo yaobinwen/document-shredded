@@ -122,6 +122,12 @@ With the above-mentioned four documentation quadrants, I find many documentation
 
 I **strongly believe** understanding `why`s is crucial to using the product correctly, because those `why`s reflect the problems the product is solving. Not understanding the `why`s may result in using the product in the wrong context to solve the wrong problem.
 
+### 6.3 Use a hybrid mode of top-down and bottom-up
+
+When it comes to explaining a technology, the single top-down or bottom-up approach may not always work the best. My personal experience is one probably needs to mix them: sometimes, give the readers an overview of the part to be introduced; sometimes, explain the low-level building blocks and aggregate them into the final topic.
+
+This is needed probably because the knowledge is not always in a tree structure but in a network structure, so different parts of the network need different methods to explain.
+
 ## Useful Links
 
 - [14 Examples of Documentation Mistakes You Are Making](http://blog.screensteps.com/14-examples-of-bad-documentation)

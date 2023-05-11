@@ -85,7 +85,13 @@ This smell means the document use terms that look similar but slightly different
 
 This can also result in steep learning curve, because the readers need to make extra efforts.
 
-_A Practical Guide to TPM 2.0_
+Take _A Practical Guide to TPM 2.0_, Chapter 8 "TPM Entities" for example. This chapter has a section "Nonpersistent Entities" that talks about nonpersistent entities. This section never mentions the term "transient entity". One page later, in the section "Entity Names", in "EXAMPLE: ATTACKER READING A SECRET", it says "The Name of a transient or persistent entity is also a digest of its public area." This is the first place that mentions "transient" in the whole book. Because the word "transient" is put side by side with "persistent", it gives the readers a hint that "transient" and "nonpersistent" are equivalent. Far down in the Chapter 18 "Context Management", the whole chapter uses "transient" all the time.
+
+This is not a good documenting practice for a few reasons:
+- The only place that connects "transient" and "nonpersistent" is the sentence "The Name of a transient or persistent entity is also a digest of its public area." This is a weak connection, not to mention the readers may skip the examples.
+- It's true that "nonpersistent" and "transient" may mean similar in English, and any fluent English readers may naturally connect them. However, this relies on the readers' ability to connect them. If the readers don't, they would get confused and don't know whether a "transient entity" is the same as "nonpersistent entity".
+- "Nonpersistent" is only used in Chapter 8. "Transient" is used through in Chapter 18. Why not just use "transient" through the entire book? A possible reason is: the two chapters were written by different authors of the book, so there was not enough coordination in the terminology they used.
+- Should the book have written a more clear sentence like "A transient entity is a nonpersistent entity" or "A nonpersistent entity is also called a transient entity", it would be much easier for the readers to understand them firmly.
 
 ## 6. Best Practices
 

@@ -134,6 +134,10 @@ When it comes to explaining a technology, the single top-down or bottom-up appro
 
 This is needed probably because the knowledge is not always in a tree structure but in a network structure, so different parts of the network need different methods to explain.
 
+## 7. Other thoughts
+
+For a complicated technology, a better approach might be explaining the technology with scenarios. Each scenario can cover part of the technology, and all the scenarios can cover all parts of the technology. I got this idea when reading TPM 2.0 (_A Practical Guide to TPM 2.0_). In the chapter 13, "Authorizations and Sessions", the chapter tries to cover most cases about authorization and sessions before showing concrete examples. This made it difficult to follow because I have to consume and digest a lot of abstract description before seeing the examples.
+
 ## Useful Links
 
 - [14 Examples of Documentation Mistakes You Are Making](http://blog.screensteps.com/14-examples-of-bad-documentation)
